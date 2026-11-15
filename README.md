@@ -68,7 +68,7 @@ Public contributions and projects can be highlighted here as they become availab
 
 ## 🛠 Technologies
 
-**Languages:** C#, C++, Python, TypeScript, JavaScript, PHP
+**Languages:** C, C#, C++, Python, TypeScript, JavaScript, PHP
 
 **Platforms:** Web, Windows, Linux, Mobile, Cloud
 
