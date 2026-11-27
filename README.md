@@ -68,6 +68,10 @@ Original projects developed and published by JSP-IT Solutions under their own op
   C# · MIT · [![Latest release](https://img.shields.io/github/v/release/JSP-IT/integration-contract-tester?label=release)](https://github.com/JSP-IT/integration-contract-tester/releases/latest)
 - **[MCP Capability Registry](https://github.com/JSP-IT/mcp-capability-registry)** — Offline inventory and deterministic change comparison of Model Context Protocol (MCP) server capabilities.<br>
   TypeScript · MIT · [![Latest release](https://img.shields.io/github/v/release/JSP-IT/mcp-capability-registry?label=release)](https://github.com/JSP-IT/mcp-capability-registry/releases/latest)
+- **[SBOM Release Diff](https://github.com/JSP-IT/sbom-release-diff)** — Offline CLI that compares the CycloneDX JSON SBOMs of two releases and reports added, removed and changed components and declared licences.<br>
+  Rust · Apache-2.0 · [![Latest release](https://img.shields.io/github/v/release/JSP-IT/sbom-release-diff?label=release)](https://github.com/JSP-IT/sbom-release-diff/releases/latest)
+- **[Webhook Delivery Kit](https://github.com/JSP-IT/webhook-delivery-kit)** — Embeddable .NET library for reliable outbound webhook delivery with HMAC signing, bounded retries and SSRF-safe networking.<br>
+  C# · Apache-2.0 · [![Latest release](https://img.shields.io/github/v/release/JSP-IT/webhook-delivery-kit?label=release)](https://github.com/JSP-IT/webhook-delivery-kit/releases/latest)
 
 ### Development & Collaboration
 
