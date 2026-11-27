@@ -1,0 +1,27 @@
+# Read-only check that README.md agrees with the English and Finnish
+# JSP-Product catalogues (solution and group counts, language parity, links).
+# It only reports in the job summary; it never edits README.md.
+# Documentation: https://github.com/JSP-IT-Solutions-Group/.github/blob/main/docs/profile-consistency.md
+
+name: Profile consistency
+
+on:
+  pull_request:
+    paths: ["README.md", ".github/workflows/profile-consistency.yml"]
+  schedule:
+    - cron: "23 6 * * 1" # Mondays 06:23 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  profile-consistency:
+    permissions:
+      contents: read
+    # Pinned to the commit of tag profile-consistency-v1.0.0 in
+    # JSP-IT-Solutions-Group/.github. Update both refs together when upgrading.
+    uses: JSP-IT-Solutions-Group/.github/.github/workflows/profile-consistency.yml@80d02193217039286bf7adc1afca2638bd5a52b2 # profile-consistency-v1.0.0
+    with:
+      counts-profiles: README.md
+      tooling-ref: 80d02193217039286bf7adc1afca2638bd5a52b2
