@@ -23,7 +23,7 @@ JSP-IT Solutions Oy is a Finland-based software and IT services company combinin
 
 ## 📦 JSP-Product™ — Business Software Solutions
 
-Our JSP-Product™ portfolio currently includes **96 software solutions** across **15 solution groups**.
+Our JSP-Product™ portfolio currently includes **102 software solutions** across **15 solution groups**.
 
 The portfolio covers a wide range of business needs, including:
 
@@ -58,13 +58,24 @@ Our contribution interests include:
 
 We aim to contribute improvements upstream where appropriate and follow each project's contribution guidelines and licensing requirements.
 
+### 📂 Published Open-Source Projects
+
+Original projects developed and published by JSP-IT Solutions under their own open-source licences. They are separate from the commercial JSP-Product™ portfolio.
+
+- **[Configuration Baseline](https://github.com/JSP-IT/configuration-baseline)** — Read-only CLI that checks JSON or YAML configuration files against approved baseline rules and reports missing, unexpected or modified settings.<br>
+  Go · MIT · [![Latest release](https://img.shields.io/github/v/release/JSP-IT/configuration-baseline?label=release)](https://github.com/JSP-IT/configuration-baseline/releases/latest)
+- **[Integration Contract Tester](https://github.com/JSP-IT/integration-contract-tester)** — Local .NET tool that compares OpenAPI and JSON Schema contracts and flags likely breaking changes before deployment.<br>
+  C# · MIT · [![Latest release](https://img.shields.io/github/v/release/JSP-IT/integration-contract-tester?label=release)](https://github.com/JSP-IT/integration-contract-tester/releases/latest)
+- **[MCP Capability Registry](https://github.com/JSP-IT/mcp-capability-registry)** — Offline inventory and deterministic change comparison of Model Context Protocol (MCP) server capabilities.<br>
+  TypeScript · MIT · [![Latest release](https://img.shields.io/github/v/release/JSP-IT/mcp-capability-registry?label=release)](https://github.com/JSP-IT/mcp-capability-registry/releases/latest)
+
 ### Development & Collaboration
 
 Our shared software development and collaboration environment:
 
 **[JSP-IT Solutions Group on GitHub](https://github.com/JSP-IT-Solutions-Group)**
 
-Public contributions and projects can be highlighted here as they become available.
+Further projects and upstream contributions will be listed here once they are published.
 
 ## 🛠 Technologies
 
