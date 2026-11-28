@@ -22,11 +22,11 @@ jobs:
   profile-consistency:
     permissions:
       contents: read
-    # Pinned to the commit of tag profile-consistency-v1.2.0 in
+    # Pinned to the commit of tag profile-consistency-v1.3.0 in
     # JSP-IT-Solutions-Group/.github. Update both refs together when upgrading.
-    uses: JSP-IT-Solutions-Group/.github/.github/workflows/profile-consistency.yml@f1bf8c5c5ebc47425ec75ac79f005e842dda7b11 # profile-consistency-v1.2.0
+    uses: JSP-IT-Solutions-Group/.github/.github/workflows/profile-consistency.yml@685cb3854f498ed4b60939d9fda1eb2532326a9b # profile-consistency-v1.3.0
     with:
       counts-profiles: README.md
-      tooling-ref: f1bf8c5c5ebc47425ec75ac79f005e842dda7b11
+      tooling-ref: 685cb3854f498ed4b60939d9fda1eb2532326a9b
       attempts: 2
       retry-delay-seconds: 30
