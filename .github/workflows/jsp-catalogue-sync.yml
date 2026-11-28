@@ -7,8 +7,14 @@
 name: JSP-Product catalogue sync
 
 on:
+  # Several runs on Mondays: GitHub-hosted runners are often served the site's
+  # bot-protection page, and each run gets a fresh runner. Runs after a
+  # successful one change nothing (the open sync pull request is just kept).
   schedule:
-    - cron: "5 6 * * 1" # Mondays 06:05 UTC, before the 06:23 consistency check
+    - cron: "5 6 * * 1" # Mondays 06:05 UTC
+    - cron: "5 9 * * 1" # Mondays 09:05 UTC
+    - cron: "5 12 * * 1" # Mondays 12:05 UTC
+    - cron: "5 15 * * 1" # Mondays 15:05 UTC
   workflow_dispatch:
 
 permissions:
@@ -23,9 +29,13 @@ jobs:
     permissions:
       contents: write
       pull-requests: write
-    # Pinned to the profile-consistency 1.1.0 commit in
+    # Pinned to the commit of tag profile-consistency-v1.3.0 in
     # JSP-IT-Solutions-Group/.github. Update both refs together when upgrading.
-    uses: JSP-IT-Solutions-Group/.github/.github/workflows/profile-consistency-sync.yml@fb57549c2a75d0e038914c441c318dc311f72353 # profile-consistency 1.1.0
+    uses: JSP-IT-Solutions-Group/.github/.github/workflows/profile-consistency-sync.yml@685cb3854f498ed4b60939d9fda1eb2532326a9b # profile-consistency-v1.3.0
     with:
       profile-path: README.md
-      tooling-ref: fb57549c2a75d0e038914c441c318dc311f72353
+      tooling-ref: 685cb3854f498ed4b60939d9fda1eb2532326a9b
+      # Retries within one run reuse the same runner, so keep them short;
+      # the extra scheduled runs above give the real second chances.
+      attempts: 2
+      retry-delay-seconds: 30

@@ -8,8 +8,11 @@ name: Profile consistency
 on:
   pull_request:
     paths: ["README.md", ".github/workflows/profile-consistency.yml"]
+  # Two runs on Mondays (after the 06:05 and 15:05 catalogue syncs), because
+  # runners are often served the site's bot-protection page.
   schedule:
-    - cron: "23 6 * * 1" # Mondays 06:23 UTC
+    - cron: "35 6 * * 1" # Mondays 06:35 UTC
+    - cron: "35 15 * * 1" # Mondays 15:35 UTC
   workflow_dispatch:
 
 permissions:
@@ -19,9 +22,11 @@ jobs:
   profile-consistency:
     permissions:
       contents: read
-    # Pinned to the profile-consistency 1.1.0 commit in
+    # Pinned to the commit of tag profile-consistency-v1.3.0 in
     # JSP-IT-Solutions-Group/.github. Update both refs together when upgrading.
-    uses: JSP-IT-Solutions-Group/.github/.github/workflows/profile-consistency.yml@fb57549c2a75d0e038914c441c318dc311f72353 # profile-consistency 1.1.0
+    uses: JSP-IT-Solutions-Group/.github/.github/workflows/profile-consistency.yml@685cb3854f498ed4b60939d9fda1eb2532326a9b # profile-consistency-v1.3.0
     with:
       counts-profiles: README.md
-      tooling-ref: fb57549c2a75d0e038914c441c318dc311f72353
+      tooling-ref: 685cb3854f498ed4b60939d9fda1eb2532326a9b
+      attempts: 2
+      retry-delay-seconds: 30
