@@ -1,0 +1,31 @@
+# Weekly sync of README.md with the English JSP-Product catalogue. Every
+# Monday, and on demand, it opens or updates a pull request that updates the
+# solution and group counts and the generated solution list. A person reviews
+# and merges the pull request; nothing is merged automatically.
+# Documentation: https://github.com/JSP-IT-Solutions-Group/.github/blob/main/docs/profile-consistency.md
+
+name: JSP-Product catalogue sync
+
+on:
+  schedule:
+    - cron: "5 6 * * 1" # Mondays 06:05 UTC, before the 06:23 consistency check
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: jsp-catalogue-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    permissions:
+      contents: write
+      pull-requests: write
+    # Pinned to the profile-consistency 1.1.0 commit in
+    # JSP-IT-Solutions-Group/.github. Update both refs together when upgrading.
+    uses: JSP-IT-Solutions-Group/.github/.github/workflows/profile-consistency-sync.yml@68dba6290f4609b62fecbaf6344be3b03be45edb # profile-consistency 1.1.0
+    with:
+      profile-path: README.md
+      tooling-ref: 68dba6290f4609b62fecbaf6344be3b03be45edb
