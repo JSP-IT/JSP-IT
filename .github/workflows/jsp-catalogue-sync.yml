@@ -23,9 +23,9 @@ jobs:
     permissions:
       contents: write
       pull-requests: write
-    # Pinned to the profile-consistency 1.1.0 commit in
+    # Pinned to the commit of tag profile-consistency-v1.2.0 in
     # JSP-IT-Solutions-Group/.github. Update both refs together when upgrading.
-    uses: JSP-IT-Solutions-Group/.github/.github/workflows/profile-consistency-sync.yml@fb57549c2a75d0e038914c441c318dc311f72353 # profile-consistency 1.1.0
+    uses: JSP-IT-Solutions-Group/.github/.github/workflows/profile-consistency-sync.yml@f1bf8c5c5ebc47425ec75ac79f005e842dda7b11 # profile-consistency-v1.2.0
     with:
       profile-path: README.md
-      tooling-ref: fb57549c2a75d0e038914c441c318dc311f72353
+      tooling-ref: f1bf8c5c5ebc47425ec75ac79f005e842dda7b11
