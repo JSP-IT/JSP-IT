@@ -8,8 +8,11 @@ name: Profile consistency
 on:
   pull_request:
     paths: ["README.md", ".github/workflows/profile-consistency.yml"]
+  # Two runs on Mondays (after the 06:05 and 15:05 catalogue syncs), because
+  # runners are often served the site's bot-protection page.
   schedule:
-    - cron: "23 6 * * 1" # Mondays 06:23 UTC
+    - cron: "35 6 * * 1" # Mondays 06:35 UTC
+    - cron: "35 15 * * 1" # Mondays 15:35 UTC
   workflow_dispatch:
 
 permissions:
@@ -25,3 +28,5 @@ jobs:
     with:
       counts-profiles: README.md
       tooling-ref: f1bf8c5c5ebc47425ec75ac79f005e842dda7b11
+      attempts: 2
+      retry-delay-seconds: 30

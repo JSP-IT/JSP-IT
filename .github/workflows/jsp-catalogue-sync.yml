@@ -7,8 +7,14 @@
 name: JSP-Product catalogue sync
 
 on:
+  # Several runs on Mondays: GitHub-hosted runners are often served the site's
+  # bot-protection page, and each run gets a fresh runner. Runs after a
+  # successful one change nothing (the open sync pull request is just kept).
   schedule:
-    - cron: "5 6 * * 1" # Mondays 06:05 UTC, before the 06:23 consistency check
+    - cron: "5 6 * * 1" # Mondays 06:05 UTC
+    - cron: "5 9 * * 1" # Mondays 09:05 UTC
+    - cron: "5 12 * * 1" # Mondays 12:05 UTC
+    - cron: "5 15 * * 1" # Mondays 15:05 UTC
   workflow_dispatch:
 
 permissions:
@@ -29,3 +35,7 @@ jobs:
     with:
       profile-path: README.md
       tooling-ref: f1bf8c5c5ebc47425ec75ac79f005e842dda7b11
+      # Retries within one run reuse the same runner, so keep them short;
+      # the extra scheduled runs above give the real second chances.
+      attempts: 2
+      retry-delay-seconds: 30
