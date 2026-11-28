@@ -21,7 +21,7 @@ jobs:
       contents: read
     # Pinned to the profile-consistency 1.1.0 commit in
     # JSP-IT-Solutions-Group/.github. Update both refs together when upgrading.
-    uses: JSP-IT-Solutions-Group/.github/.github/workflows/profile-consistency.yml@68dba6290f4609b62fecbaf6344be3b03be45edb # profile-consistency 1.1.0
+    uses: JSP-IT-Solutions-Group/.github/.github/workflows/profile-consistency.yml@fb57549c2a75d0e038914c441c318dc311f72353 # profile-consistency 1.1.0
     with:
       counts-profiles: README.md
-      tooling-ref: 68dba6290f4609b62fecbaf6344be3b03be45edb
+      tooling-ref: fb57549c2a75d0e038914c441c318dc311f72353
