@@ -1,10 +1,11 @@
-# Weekly sync of README.md with the English JSP-Product catalogue. Every
-# Monday, and on demand, it opens or updates a pull request that updates the
-# solution and group counts and the generated solution list. A person reviews
+# Weekly sync of README.md with the English JSP-Product catalogue and JSP-IT's
+# published open-source projects. Every Monday, and on demand, it opens or
+# updates a pull request that updates the solution and group counts, the
+# generated solution list and the generated project list. A person reviews
 # and merges the pull request; nothing is merged automatically.
 # Documentation: https://github.com/JSP-IT-Solutions-Group/.github/blob/main/docs/profile-consistency.md
 
-name: JSP-Product catalogue sync
+name: Profile sync (catalogue and projects)
 
 on:
   # Several runs on Mondays: GitHub-hosted runners are often served the site's
@@ -29,12 +30,15 @@ jobs:
     permissions:
       contents: write
       pull-requests: write
-    # Pinned to the commit of tag profile-consistency-v1.3.0 in
+    # Pinned to the commit of tag profile-consistency-v1.4.0 in
     # JSP-IT-Solutions-Group/.github. Update both refs together when upgrading.
-    uses: JSP-IT-Solutions-Group/.github/.github/workflows/profile-consistency-sync.yml@685cb3854f498ed4b60939d9fda1eb2532326a9b # profile-consistency-v1.3.0
+    uses: JSP-IT-Solutions-Group/.github/.github/workflows/profile-consistency-sync.yml@fa344953fae08b7d20139aab0b08aa385a43af2a # profile-consistency-v1.4.0
     with:
       profile-path: README.md
-      tooling-ref: 685cb3854f498ed4b60939d9fda1eb2532326a9b
+      # Also sync the "Published Open-Source Projects" list from JSP-IT's public repositories.
+      projects-owner: JSP-IT
+      projects-format: list
+      tooling-ref: fa344953fae08b7d20139aab0b08aa385a43af2a
       # Retries within one run reuse the same runner, so keep them short;
       # the extra scheduled runs above give the real second chances.
       attempts: 2
