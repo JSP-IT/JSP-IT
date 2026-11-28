@@ -85,7 +85,7 @@ Further projects and upstream contributions will be listed here once they are pu
 
 ## 🛠 Technologies
 
-**Languages:** C, C#, C++, Python, TypeScript, JavaScript, PHP
+**Languages:** C, C#, C++, Go, Python, Rust, TypeScript, JavaScript, PHP and more
 
 **Platforms:** Web, Windows, Linux, Mobile, Cloud
 
