@@ -291,18 +291,23 @@ We aim to contribute improvements upstream where appropriate and follow each pro
 
 Original projects developed and published by JSP-IT Solutions under their own open-source licences. They are separate from the commercial JSP-Product™ portfolio.
 
-- **[Configuration Baseline](https://github.com/JSP-IT/configuration-baseline)** — Read-only CLI that checks JSON or YAML configuration files against approved baseline rules and reports missing, unexpected or modified settings.<br>
+<!-- github-projects:start -->
+<!-- Generated from the public GitHub repositories of JSP-IT by the weekly profile sync. Edit a description in the repository's About text; edits here are overwritten. -->
+
+- **[Configuration Baseline](https://github.com/JSP-IT/configuration-baseline)** — A lightweight, read-only Go utility for comparing system or application configurations against approved baselines.<br>
   Go · MIT · [![Latest release](https://img.shields.io/github/v/release/JSP-IT/configuration-baseline?label=release)](https://github.com/JSP-IT/configuration-baseline/releases/latest)
-- **[Integration Contract Tester](https://github.com/JSP-IT/integration-contract-tester)** — Local .NET tool that compares OpenAPI and JSON Schema contracts and flags likely breaking changes before deployment.<br>
+- **[Integration Contract Tester](https://github.com/JSP-IT/integration-contract-tester)** — Local .NET compatibility checks for OpenAPI and JSON Schema API contracts.<br>
   C# · MIT · [![Latest release](https://img.shields.io/github/v/release/JSP-IT/integration-contract-tester?label=release)](https://github.com/JSP-IT/integration-contract-tester/releases/latest)
-- **[MCP Capability Registry](https://github.com/JSP-IT/mcp-capability-registry)** — Offline inventory and deterministic change comparison of Model Context Protocol (MCP) server capabilities.<br>
+- **[MCP Capability Registry](https://github.com/JSP-IT/mcp-capability-registry)** — Local-first MCP server capability inventory and deterministic change comparison.<br>
   TypeScript · MIT · [![Latest release](https://img.shields.io/github/v/release/JSP-IT/mcp-capability-registry?label=release)](https://github.com/JSP-IT/mcp-capability-registry/releases/latest)
-- **[Restore Evidence](https://github.com/JSP-IT/restore-evidence)** — Read-only CLI that records backup restore tests and verifies restored files against a manifest, with deterministic JSON and HTML reports.<br>
+- **[Restore Evidence](https://github.com/JSP-IT/restore-evidence)** — Read-only Go CLI that documents backup restore tests and verifies restored files against a manifest, with deterministic JSON and HTML reports.<br>
   Go · Apache-2.0 · [![Latest release](https://img.shields.io/github/v/release/JSP-IT/restore-evidence?label=release)](https://github.com/JSP-IT/restore-evidence/releases/latest)
-- **[SBOM Release Diff](https://github.com/JSP-IT/sbom-release-diff)** — Offline CLI that compares the CycloneDX JSON SBOMs of two releases and reports added, removed and changed components and declared licences.<br>
+- **[SBOM Release Diff](https://github.com/JSP-IT/sbom-release-diff)** — Deterministic, offline comparison of two CycloneDX JSON SBOMs for release review and CI gates.<br>
   Rust · Apache-2.0 · [![Latest release](https://img.shields.io/github/v/release/JSP-IT/sbom-release-diff?label=release)](https://github.com/JSP-IT/sbom-release-diff/releases/latest)
-- **[Webhook Delivery Kit](https://github.com/JSP-IT/webhook-delivery-kit)** — Embeddable .NET library for reliable outbound webhook delivery with HMAC signing, bounded retries and SSRF-safe networking.<br>
+- **[Webhook Delivery Kit](https://github.com/JSP-IT/webhook-delivery-kit)** — Embeddable .NET library for reliable outbound webhook delivery: at-least-once, signed, bounded retries, SSRF-safe.<br>
   C# · Apache-2.0 · [![Latest release](https://img.shields.io/github/v/release/JSP-IT/webhook-delivery-kit?label=release)](https://github.com/JSP-IT/webhook-delivery-kit/releases/latest)
+
+<!-- github-projects:end -->
 
 ### Development & Collaboration
 
